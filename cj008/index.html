@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>创家品牌介绍</title>
+    <link rel="stylesheet" href="css/game.css">
+	<script type='text/javascript' src='js/touch.js'></script>
+    <script>
+	    var size_rate=1;
+        function a(d, c, e) {
+            if (d.addEventListener) {
+                d.addEventListener(c, e, false)
+            } else {
+                d.attachEvent('on' + c, e)
+            }
+        };
+        function b() {
+            var c = document.documentElement.clientHeight || document.body.clientHeight;
+			size_rate=c/750;
+            document.documentElement.style.fontSize = c / 7.5 + 'px'
+        };
+        b();
+        a(window, 'resize', b);
+    </script>
+</head>
+
+<body>
+	<article id='lastChapter'>
+	     <ul class='chapter-wrap'>
+		      <li><img src='img/h5001.jpg' /></li>
+			  <li><img src='img/h5002.jpg' /></li>
+			  <li><img src='img/h5003.jpg' /></li>
+			  <li><img src='img/h5004.jpg' /></li>
+			  <li><img src='img/h5005.jpg' /></li>
+			  <li><img src='img/h5006.jpg' /></li>
+			  <li><img src='img/h5007.jpg' /></li>
+			  <li><img src='img/h5008.jpg' /></li>
+			  <li><img src='img/h5009.jpg' /></li>
+			  <li><img src='img/h5010.jpg' /></li>
+			  <li><img src='img/h5011.jpg' /></li>
+		 </ul>
+		 <div class='arrow arrow-1' id='swipeArrow'>		 
+		 </div>
+	</article>
+</body>
+<script>
+   Touch();
+ </script>
+
+</html>
