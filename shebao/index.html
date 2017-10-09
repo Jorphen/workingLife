@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>个人补缴社保具不具备买房资格？</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+	<meta name='viewport' content='width=750,maximum-scale=1.0,user-scalable=no'>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	 <script type="text/javascript">
+        function b() {
+            var c = document.documentElement.clientWidth || document.body.clientWidth;
+            document.documentElement.style.fontSize = c / 7.5 + 'px';
+        };
+        b();
+        window.onresize = b;
+    </script>
+	<script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?1e17b203b7001ce3fe57aa14acd71b9b";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+      <article id='content-container'>
+	          <img src='img/1.jpg' />			  
+			  <img src='img/2.jpg' />
+			  <img src='img/0.jpg' />
+			  <img src='img/3.jpg' />
+			  <img src='img/4.jpg' />
+			  <img src='img/5.jpg' />
+			  <section class='mgs-container'>
+			           <h3>
+					         <span></span>发表留言
+					   </h3>
+					   <textarea class='msg-district'>
+			  
+			           </textarea>
+					   <button id='msg-commit' class='hide'>提交</button>
+					   <div class='msg-btns'>
+					         <div class='btn-niming hide'></div>
+							 <div class='btn-login'></div>
+					   </div>
+			  </section>
+			  <ul id='msg-interactive'>
+			        <li class='answer-list' style='display:none;'>
+					      <span class='answer-username'>A网友<mark>回复:</mark></span><span class='msg'>如果在学信网的学历证明是高等教育自学考试本科,可以享受本科落户政策吗？</span>
+					      <div class='thumb'>
+						         0
+						  </div>
+					</li>
+			  </ul>
+	  </article>
+	  <article id='login-container'>
+	         <div class='mfm-logo'></div>
+			 <div class='close-login'></div>
+			 <h3>请输入您的昵称和电话号码</h3>
+			 <div class='ipt-container ipt-container-username'>
+			       <label class='ipt-user-label' for='user'></label>
+				   <input type='text' name='username' id='username'>
+			 </div>
+			 <div class='ipt-container ipt-container-tel'>
+			       <label class='ipt-tel-label' for='tel'></label>
+				   <input type='text' name='tel' id='tel'>
+			 </div>
+			 <div class='remeber-counter-container'>
+			       <span class='rember-conter-btn'></span>记住账号
+			 </div>
+			 <div id='loging-btn'></div>
+	  </article>
+      <div class="mask"></div>
+      <div style='display:none'>
+	        <script src="//s4.cnzz.com/z_stat.php?id=1259942886&web_id=1259942886" language="JavaScript"></script>
+			<script src="//c.cnzz.com/core.php?web_id=1259942886&amp;t=z" charset="utf-8" type="text/javascript"></script>
+			<a href="//www.cnzz.com/stat/website.php?web_id=1259942886" target="_blank" title="站长统计">站长统计</a>
+	  </div>  
+      <script type="text/javascript" src="js/app.js" charset="utf-8"></script>
+</body>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"> </script>
+<script>
+	var ssid = window.localStorage.CJSSID || "";
+	$.ajax({
+		url: "https://zt.maifangma.com/wxsso/sign?ssid=" + ssid,
+		method: "get",
+		success: function (res) {
+			if (res.code == 200) {
+				if (res.ssid) {
+					window.localStorage.CJSSID = res.ssid;
+				}
+				var sign = res.sign;
+				sign.jsApiList = [
+					'onMenuShareTimeline',
+					'onMenuShareAppMessage'
+				]
+
+				wx.config(sign);
+
+				wx.ready(function () {
+					var shareData = {
+						title: '个人补缴社保具不具备买房资格？',
+						desc: '个人补缴社保具不具备买房资格？',
+						link: location.href,
+						imgUrl: 'https://zt.maifangma.com/activity/201709/shebao/img/logo.jpg'
+					};
+//						var shareData2 = {
+//							title: '七月流火 清凉开盘',
+//							desc: '七月开盘日历',
+//							link: 'https://zt.maifangma.com/activity/201704/calendar/',
+//							imgUrl: 'https://static-zt.maifangma.com/activity/201704/calendar/img/share-cd.jpg'
+//						};
+
+					wx.onMenuShareAppMessage(shareData);
+					wx.onMenuShareTimeline(shareData);
+				});
+
+				wx.error(function (res) {
+					alert(res.errMsg);
+				});
+			}
+		}
+	});
+</script>
+</html>

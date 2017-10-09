@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-webkit-tap-highlight-color:transparent;
+}
+html{
+    height: 100%;
+    background: #000;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    line-height: 1;
+    color: #000;
+    height:100%;	  
+	overflow:hidden;	
+}
+#loading{
+       position:absolute;
+	   width:100%;
+	   height:100%;
+	   z-index:99;
+	   background-color:white;
+   }
+#loading img{
+      display:block;
+	  position:absolute;
+	   top:0;
+	   left:0;
+	   right:0;
+	   bottom:0;
+	   margin:auto;
+   }
+#success,#repeat,#failure,#over{
+	width:100%;
+	height:100%;
+	position:absolute;
+	border:0;
+	z-index:44;
+	top:0;
+	left:0;
+}
+#index{
+	width:100%;
+	height:100%;
+}
+#index>img{
+	width:100%;
+	height:100%;
+	display:block;
+}
+#page{
+	width:100%;
+	height:100%;
+	background:url(../img/1/1.jpg) no-repeat;
+	background-size:100% 100%;
+}
+.congratuation{
+	width:512px;
+	display:block;
+	position:absolute;
+	left:50%;
+	top:550px;
+	margin-left:-256px;
+}
+.get{
+	width:212px;
+	display:block;
+	position:absolute;
+	left:50%;
+	top:766px;
+	margin-left:-106px;
+}
+.intro{
+	width:429px;
+	display:block;
+	position:absolute;
+	left:50%;
+	top:860px;
+	margin-left:-215px;
+}
+.formBg{
+	width:586px;
+	display:block;
+	position:absolute;
+	left:50%;
+	top:243px;
+	margin-left:-293px;
+}
+.username,.telephone{
+	position:absolute;
+    width:310px;
+	height:65px;
+	border:0;
+	font-size:32px;
+	text-align:center;
+	letter-spacing:3px;
+	color:white;
+	background-color:transparent;
+	left:295px;
+}
+.name1{
+	top:292px;
+}
+.name2{
+	top:598px;
+}
+.tel01{
+	top:410px;
+}
+.tel02{
+	top:720px;
+}
+.commit{
+	width:215px;
+	left:50%;
+	position:absolute;
+	margin-left:-107px;
+	top:828px;
+}
+.description{
+	width:428px;
+	position:absolute;
+	left:50%;
+	margin-left:-214px;
+	top:840px;
+}
+#mask,#userform{
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	position:absolute;
+	margin:auto;
+	z-index:999;
+	background-color:rgba(0,0,0,.8);
+}
+.alert{
+	width:450px;
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin:auto;
+	display:block;
+}
+.quit{
+	width:57px;
+	display:block;
+	top:333px;
+	position:absolute;
+	left:543px;
+}
+/*感谢参与页面*/
+#thanks{
+	width:100%;
+	height:100%;
+	background:url(../img/2/1.png) no-repeat;
+	background-size:100% 100%;
+}
+.lose{
+	width:615px;
+	position:absolute;
+	left:50%;
+	margin-left:-307px;
+	top:634px;
+}
+.tel{
+	width:193px;
+	position:absolute;
+	top:981px;
+	left:174px;
+}
+.map{
+	width:193px;
+	position:absolute;
+	top:981px;
+	left:387px;
+}
+.hide{
+	display:none;
+}

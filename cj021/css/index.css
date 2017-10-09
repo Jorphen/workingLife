@@ -1,0 +1,244 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     -webkit-tap-highlight-color: transparent;
+ }
+ 
+ html {
+     height: 100%;
+ }
+ 
+ body {
+     width: 100%;
+     background-color: #efefef;
+     padding-bottom: 80px;
+ }
+ 
+ #loading {
+     width: 100%;
+     height: 100%;
+     background: url(../img/loading.gif) no-repeat white;
+     background-position: center center;
+     background-size: 80px;
+ }
+ 
+ #info {
+     box-sizing: border-box;
+     width: 654px;
+     height: 700px;
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     margin: auto;
+     padding: 128px 50px 74px;
+     border-radius: 10px;
+     background-color: #efefef;
+     display: none;
+     z-index: 99;
+     background: #fff url('../img/fancy.png') no-repeat left 40px / 100% auto;
+ }
+ 
+ .component {
+     margin-bottom: 90px;
+     /*padding-left: 54px;*/
+     overflow: hidden;
+ }
+ 
+ .component label {
+     height: 46px;
+     font-size: 32px;
+     line-height: 46px;
+     display: inline-block;
+ }
+ /* 
+ .component label[for=username],
+ .component label[for=age] {
+     letter-spacing: 110px;
+ }
+ 
+ .component label[for=tel],
+ .component label[for=job],
+ .component label[for=address] {
+     width: 328px;
+ }*/
+ 
+ .component input {
+     height: 46px;
+     outline: none;
+     border: none;
+     border-bottom: 2px solid #000;
+     vertical-align: top;
+     line-height: 46px;
+     display: inline-block;
+     width: 360px;
+     font-size: 32px;
+     color: #000;
+     text-indent: 1em;
+     background: transparent;
+     margin-left: 10px;
+     border-radius: 0;
+     -webkit-appearance: none;
+     appearance: none;
+ }
+ 
+ .component .w50 {
+     float: left;
+ }
+ 
+ .component .w50:last-child {
+     float: right;
+ }
+ 
+ .w50 input {
+     width: 156px;
+ }
+ 
+ #cmt {
+     position: absolute;
+     bottom: 56px;
+     left: 50px;
+     width: 552px;
+     height: 110px;
+     margin: 0 auto;
+     overflow: hidden;
+     display: block;
+     background: url(../img/commit.png) no-repeat;
+     background-size: 100% 100%;
+     background-position: center center;
+     -webkit-appearance: none;
+     border: none;
+ }
+ 
+ .ft {
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 80px;
+     text-decoration: none;
+     line-height: 80px;
+     text-align: center;
+     color: #fff;
+     letter-spacing: 6px;
+     font-size: 42px;
+     background: #00a7ff;
+ }
+ 
+ .cancel {
+     width: 60px;
+     height: 60px;
+     background: url(../img/cancel.png) no-repeat white;
+     background-size: 100% 100%;
+     background-position: center center;
+     border-radius: 50%;
+     position: absolute;
+     top: 28px;
+     right: 28px;
+ }
+ 
+ #container {
+     width: 750px;
+     margin: 0 auto;
+ }
+ 
+ #container img {
+     display: block;
+     width: 100%;
+ }
+ 
+ #container .top {
+     position: relative;
+ }
+ 
+ #container .top .icon {
+     position: absolute;
+ }
+ 
+ #container .top .icon1 {
+     left: 481px;
+     top: 685px;
+     width: 164px;
+ }
+ 
+ #container .top .icon2 {
+     left: 660px;
+     top: 685px;
+     width: 164px;
+ }
+ 
+ #container .top .icon3 {
+     left: 50%;
+     margin-left: -282px;
+     top: 1095px;
+     width: 564px;
+ }
+ 
+ #container .top .icon4 {
+     left: 50%;
+     margin-left: -39px;
+     top: 1223px;
+     width: 77px;
+     -webkit-transform: rotateZ(45deg);
+     transform: rotateZ(45deg);
+     animation: flash 2s linear infinite;
+     animation-delay: .4s;
+     -webkit-animation: flash 2s linear infinite;
+     -webkit-animation-delay: .4s;
+ }
+ 
+ #consult {
+     position: fixed;
+     display: block;
+     font-size: 40px;
+     color: white;
+     border-top-right-radius: 6px;
+     border-bottom-right-radius: 6px;
+     padding: 40px 24px;
+     text-decoration: none;
+     background-color: rgba(5, 200, 250, 1);
+     bottom: 0;
+     left: 0;
+ }
+ 
+ .item {
+     width: 50%;
+     float: left;
+     height: 100;
+     line-height: 80px;
+     text-decoration: none;
+     color: #fff;
+     font-size: 36px;
+     border-right: 1px solid #fff;
+ }
+ 
+ .item:last-child {
+     border: none;
+ }
+ 
+ @keyframes flash {
+     0% {
+         opacity: 1;
+     }
+     50% {
+         opacity: 0;
+     }
+     100% {
+         opacity: 1;
+     }
+ }
+ 
+ @-webkit-keyframes flash {
+     0% {
+         opacity: 1;
+     }
+     50% {
+         opacity: 0;
+     }
+     100% {
+         opacity: 1;
+     }
+ }

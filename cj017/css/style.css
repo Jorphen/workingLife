@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-webkit-tap-highlight-color:transparent;
+}
+html{
+    height: 100%;
+    background: #000;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    line-height: 1;
+    color: #000;
+    height:100%;
+	width: 750px;
+	  
+    -webkit-tap-highlight-color: transparent;
+	overflow:hidden;
+	
+}
+#page{
+	width:750px;
+	height:100%;
+}
+#page>img{
+	display:block;
+	width:100%;
+	height:100%;
+}
+#page2{
+	width:750px;
+	height:100%;	
+	background:url(../img/1.jpg) no-repeat;
+	background-size:100% 100%;
+	position:relative;
+	overflow:hidden;
+}
+#page3{
+		width:750px;
+		height:100%;
+		background-color:Red;
+		background:url(../img/3/0.jpg) no-repeat;
+		background-size:100% 100%;
+}
+#page4{
+		width:750px;
+		height:100%;
+		background-color:Red;
+		background:url(../img/1.jpg) no-repeat;
+		background-size:100% 100%;
+}
+#page4 .p1{
+	    width:434px;
+		height:538px;
+		position:absolute;
+		top:155px;
+		left:198px;
+}
+#page4 .p2{
+	    width:614px;
+		height:263px;
+		position:absolute;
+		top:723px;
+		left:50%;
+		margin-left:-307px;
+}
+.dog{
+	position:absolute;
+	width:420px;
+	height:410px;
+	top:78px;
+	left:50%;
+	margin-left:-210px;
+}
+.hide{
+	display:none;
+}
+.ipt{
+	position:absolute;
+	top:468px;
+	left:124px;
+	width:498px;
+	height:239px;
+}
+.commit{
+	width:215px;
+	height:65px;
+	position:absolute;
+	left:248px;
+	top:694px;
+}
+.description{
+	width:505px;
+	height:213px;
+	position:absolute;
+	left:136px;
+	top:770px;
+}
+.tel{
+	width:193px;
+	height:60px;
+	position:absolute;
+	top:1032px;
+	left:171px;
+}
+.map{
+	width:193px;
+	height:60px;
+	position:absolute;
+	top:1032px;
+	left:379px;
+}
+.tel>img,.map>img{
+	display:block;
+	width:100%;
+	height:100%;
+}
+#username,#telephone{
+	position:absolute;
+    width:265px;
+	height:60px;
+	border:0;
+	font-size:32px;
+	text-align:center;
+	letter-spacing:3px;
+	color:white;
+	background-color:transparent;
+}
+#username{
+	left:306px;
+	top:506px;
+}
+#telephone{
+	left:306px;
+	top:610px;
+}
+#loading{
+       position:absolute;
+	   width:100%;
+	   height:100%;
+	   z-index:99;
+	   background-color:white;
+   }
+#loading img{
+      display:block;
+	  position:absolute;
+	   top:0;
+	   left:0;
+	   right:0;
+	   bottom:0;
+	   margin:auto;
+   }
