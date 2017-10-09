@@ -1,0 +1,466 @@
+﻿*{padding:0;
+  margin:0;
+  outline:0;
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
+ }
+html{height:100%;
+}
+body{width:100%;
+     height:100%;
+	 background-color:#0d1022;
+	 overflow:hidden;
+}
+/*加载页面*/
+#loading{
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	background:url(../img/loading.gif) no-repeat white;
+	background-position:center;
+	background-size:50px;
+	z-index:999999999;
+}
+#container{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+#container .wrapper{
+	width:100%;
+	height:2997px;
+	background-image:url(../img2/bg.jpg);
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+}
+.hide{
+	display:none;
+}
+#line{
+	width:100%;
+	height:100%;
+}
+#myCanvas{
+	width:100%;
+	height:100%;
+}
+.symbol{
+	position:absolute;
+	display:block;
+}
+.symbol.hide{
+	display:none;
+}
+.s1{
+	width:10px;
+	top:-10px;
+	left:107px;
+}
+.s2{
+	height:10px;
+	top:252px;
+	left:42px;
+}
+.s3{
+	height:10px;
+	top:252px;
+	left:142px;
+}
+.s4{
+	width:10px;
+	top:293px;
+	left:107px;
+}
+.s5{
+	height:10px;
+	top:461px;
+	left:-20px;
+}
+.s6{
+	width:10px;
+	top:456px;
+	left:107px;
+}
+.s7{
+	height:10px;
+	top:1615px;
+	left:72px;
+}
+.s8{
+	width:10px;
+	top:1610px;
+	left:690px;
+}
+.s9{
+	height:10px;
+	top:2335px;
+	left:690px;
+}
+.s10{
+	width:10px;
+	top:2330px;
+	left:107px;
+}
+.s11{
+	height:10px;
+	top:2761px;
+	left:82px;
+}
+.s12{
+	width:10px;
+	top:2766px;
+	left:519px;
+}
+/*线路*/
+.sanhuanlu{
+	top:224px;
+	width:66px;
+	left:638px;
+}
+.tianfudadao{
+	width:24px;
+	top:338px;
+	left:131px;
+}
+.fuchengdadao{
+	width:113px;
+	left:639px;
+	top:428px;
+}
+.tianfuguoji{
+	width:49px;
+	left:46px;
+	top:869px;
+}
+.title{
+	position:absolute;
+	border:2px solid rgba(208,184,126,1);
+	border-radius:4px;
+	overflow:hidden;
+}
+.title1{
+	width:440px;
+	height:80px;
+	top:553px;
+	left:50%;
+	margin-left:-200px;
+	background:url(../img2/t1.png) no-repeat;
+	background-size:400px auto;
+    background-position:center center;
+}
+.title2{
+	width:440px;
+	height:80px;
+	top:1714px;
+	left:50%;
+	margin-left:-200px;
+	background:url(../img2/t2.png) no-repeat;
+	background-size:400px auto;
+    background-position:center center;
+}
+.title-mask{
+	width:34px;
+	height:80px;
+	margin-left:-34px;
+	background:url(../img2/title-mask.png) no-repeat;
+	background-size:34px 80px;
+	opacity:0.5;
+	background-position:center center;
+	transition:transform 1.5s linear;
+}
+.title-mask.active{
+	transform:translateX(500px);
+}
+@keyframes titleAni{
+	0%{height:300px;}
+	100%{height:0px;}
+}
+/*处理圆环部分*/
+#circle-handle{
+	width:84px;
+	height:84px;
+	position:absolute;
+	top:220px;
+	left:73px;
+	background:url(../img2/circle.png) no-repeat;
+	background-size:100% 100%;
+	transition:width 2s ease;
+}
+#circle-handle.active{
+	animation:circleShow 2s linear;
+	animation-fill-mode:both;
+}
+@keyframes circleShow{
+	0%{height:84px;}
+	100%{height:0px;}
+}
+/*大厦部分*/
+#building-wrapper{
+	width:592px;
+	height:800px;
+	position:absolute;
+	perspective:50000000px;	
+	top:694px;
+	left:138px;
+}
+.build-1{
+	width:249px;
+	top:616px;
+	left:118px;
+	transform-origin:center bottom 0px;
+	transform:rotateX(90deg);
+	transition:transform 1s linear;
+}
+.build-2{
+	width:138px;
+	top:121px;
+	left:154px;
+	transform-origin:center bottom 0px;
+	transform:rotateX(90deg);
+	transition:transform 1s linear;
+}
+.build-3{
+	width:290px;
+	top:338px;
+	left:282px;
+	transform-origin:center bottom 0px;
+	transform:rotateX(90deg);
+	transition:transform 1s linear;
+}
+.build-1.active,.build-2.active,.build-3.active{
+	animation:RotateX 1s linear;
+	animation-fill-mode:both;
+}
+@keyframes RotateX{
+	0%{transform:rotateX(90deg);}
+	100%{transform:rotateX(0deg);}
+}
+/*点线说明图*/
+.dot-line{
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index:1;
+}
+.dots{
+	width:20px;
+	height:20px;
+	border-radius:50%;
+	position:absolute;
+	background-color:rgba(201,169,117,.5);
+	animation:spreadWave 1s linear infinite;
+	animation-fill-mode:both;
+}
+@keyframes spreadWave{
+	0%{background-color:rgba(201,169,117,.5);}
+	100%{background-color:rgba(201,169,117,0);}
+}
+.inner{
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	position:absolute;
+	background-color:rgba(201,169,117,1);
+	top:5px;
+	left:5px;
+}
+.dot1{
+	left:100px;
+	top:675px;
+}
+.dot2{
+	left:133px;
+	top:566px;
+}
+.dot3{
+	left:133px;
+	top:244px;
+}
+.dot4{
+	left:318px;
+	top:390px;
+}
+/*建筑描述语*/
+.arc-description{
+	position:absolute;
+	display:block;
+}
+.arc-description.hide{
+	display:none;
+}
+.des1{
+	width:167px;
+	top:805px;
+	left:16px;
+}
+.des2{
+	width:172px;
+	top:374px;
+	left:10px;
+}
+.des3{
+	width:216px;
+	top:0px;
+	left:0px;
+}
+.des4{
+	width:183px;
+	top:155px;
+	left:352px;
+}
+/*公园部分*/
+#park-wrapper{
+	position:absolute;
+	width:628px;
+	height:628px;
+	top:1748px;
+	left:50px;
+	overflow:hidden;
+}
+#park-wrapper .park-mask{
+	position:absolute;
+	width:1px;
+	height:1px;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	background-image:url(../img2/park.png);
+	background-size:550px 393px;
+	background-position:center center;
+	background-repeat:no-repeat;
+	border-radius:50%;
+	opacity:0;
+}
+#park-wrapper .park-mask.active{
+	animation:parkShow 5s linear;
+	animation-fill-mode:both;
+}
+@keyframes parkShow{
+	0%{width:0px;height:0px;opacity:0}
+	100%{width:100%;height:100%;opacity:1}
+}
+.t3-1{
+	width:258px;
+	top:2406px;
+	left:144px;
+}
+.t3-2{
+	width:346px;
+	top:2474px;
+	left:144px;
+}
+.t3-3{
+	width:419px;
+	top:2538px;
+	left:144px;
+}
+.t3-4{
+	width:256px;
+	top:2627px;
+	left:144px;
+}
+.t3-5{
+	width:111px;
+	top:2420px;
+	left:593px;
+	transform:scale(0,0);
+	opacity:0;
+}
+.t3-5.active{
+	animation:Scale 1s linear;
+	animation-fill-mode:both;
+}
+@keyframes Scale{
+	0%{transform:scale(0,0);opacity:0}
+	100%{transform:scale(1,1);opacity:1}
+}
+#next{
+	width:100px;
+	height:60px;
+    position:absolute;
+	bottom:10px;
+	left:50%;
+	margin-left:-50px;
+	z-index:99;	
+}
+#next a{
+	display:block;
+	width:100%;
+	height:100%;
+	background:url(../img2/btn.jpg) no-repeat;
+	background-size:100% 100%;
+}
+#next.hide{
+	display:none;
+}
+#mask{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	z-index:9999;
+	display:none;
+}
+#music {
+    display: none;
+    height: 0;
+    opacity: 0;
+}
+#bgm-btn {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: url(../img3/bgm-bg.png) bottom;
+    background-size: 100%;
+    z-index: 999;
+}
+
+#bgm-btn.rotate {
+    background-position: top;
+    -webkit-animation: rotate 2.2s linear infinite;
+    animation: rotate 2.2s linear infinite;
+}
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 9999;
+}
+
+#loading img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
+}
+@-webkit-keyframes rotate /*Safari and Chrome*/
+    {
+        0% { -webkit-transform:rotate(0deg);}
+        25% { -webkit-transform:rotate(-90deg);}    
+        50% { -webkit-transform:rotate(-180deg);}
+        75% { -webkit-transform:rotate(-270deg);}
+        100% { -webkit-transform:rotate(-360deg);}
+    }
+
+@keyframes rotate 
+    {
+        0% { -webkit-transform:rotate(0deg); transform:rotate(0deg);}
+        25% { -webkit-transform:rotate(-90deg); transform:rotate(-90deg);}    
+        50% { -webkit-transform:rotate(-180deg); transform:rotate(-180deg);}
+        75% { -webkit-transform:rotate(-270deg); transform:rotate(-270deg);}
+        100% { -webkit-transform:rotate(-360deg); transform:rotate(-360deg);}
+    }
